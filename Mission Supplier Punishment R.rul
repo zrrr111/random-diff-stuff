@@ -1,0 +1,151 @@
+extraStrings:
+  - type: en-US
+    strings: 	
+      STR_CRACKHOUSE: "Punishing the Backstabber Supplier"
+      STR_LOC_CRACKHOUSE_TITLE: "Punishing the Backstabber Supplier"
+      STR_MARKER_LOC_CRACKHOUSE: "Punishing the Backstabber Supplier"
+      STR_LOC_CRACKHOUSE_BRIEFING: "The Madam has a backstabbing Black Market supplier that she need punished. Her sources has it that this supplier has his stock and goods store in a house somewhere in the area. Raid it and kill the Supplier. Do note the supplier may have backup bandit forces with him."   
+alienDeployments:
+  - type: STR_CRACKHOUSE
+    startingCondition: STR_MISSIONSMALLAREATOLANDCRAFTLAND
+    missionBountyItem: STR_BOUNTYOSIINVESTIGATIONMED	
+    enviroEffects: STR_LANDARMOURTOLAND	        
+    alert: STR_LOC_CRACKHOUSE_TITLE
+    alertBackground: BACK04.SCR
+    alertDescription: STR_LOC_CRACKHOUSE_BRIEFING
+    music:
+      - GMTACTIC
+    briefing:
+      palette: 7
+      background: BACK04.SCR
+      showTarget: false
+      title: STR_LOC_CRACKHOUSE_TITLE
+      desc: STR_LOC_CRACKHOUSE_BRIEFING
+    markerName: STR_MARKER_LOC_CRACKHOUSE
+    duration: [10, 100]
+    width: 40
+    length: 40
+    height: 9
+    script: GENERALSPAWN
+    customUfo: STR_CRACKHOUSE
+    data:
+      - alienRank: 3
+        lowQty: 0
+        highQty: 1
+        dQty: 1
+        percentageOutsideUfo: 10
+        itemSets:
+          -
+            []
+          -
+            []
+          -
+            []            
+          -
+            []
+          -
+            []
+      - alienRank: 4
+        lowQty: 4
+        highQty: 7
+        dQty: 0
+        percentageOutsideUfo: 30
+        itemSets:
+          -
+            []
+          -
+            []
+          -
+            []            
+          -
+            []
+          -
+            []
+      - alienRank: 5
+        lowQty: 1
+        highQty: 3
+        dQty: 0
+        percentageOutsideUfo: 10
+        itemSets:
+          -
+            []
+          -
+            []
+          -
+            []            
+          -
+            []
+          -
+            []
+      - alienRank: 9
+        lowQty: 1
+        highQty: 1
+        dQty: 0
+        percentageOutsideUfo: 0
+        itemSets:
+          -
+            []
+          -
+            []
+          -
+            []            
+          -
+            []
+          -
+            []	
+alienMissions:
+  - type: STR_CRACKHOUSE
+    points: 0
+    objective: 0
+    retaliationOdds: 0
+    spawnZone: 0
+    raceWeights:
+      0:
+          STR_RAIDER: 10	  
+          STR_BANDIT_ROBBERS: 10
+          STR_RAIDER_TERROR: 10
+          STR_RATMEN: 15
+          STR_BANDIT_ROBBERS: 15
+          STR_BANDIT_TOWN: 15	
+          STR_BANDIT: 15
+          STR_BANDIT_VILLAGE: 10
+    waves:
+      - ufo: STR_CRACKHOUSE
+        count: 1
+        trajectory: MISSION_SPAWN
+        timer: 1000
+        objective: true	
+ufos:
+  - type: STR_CRACKHOUSE
+    size: STR_VERY_SMALL
+    damageMax: 1
+    speedMax: 500
+    accel: 1
+    battlescapeTerrainData:
+      name: DEBTORHOUSE
+      mapDataSets:
+        - BLANKS
+        - ROADS
+        - URBITS
+        - URBAN
+        - FRNITURE
+        - PORT02	
+      mapBlocks:
+        - name: DEBTORHOUSE
+          width: 10
+          length: 10
+missionScripts:
+  - type: crackhousespawning
+    firstMonth: 0  
+    missionWeights:
+      0:
+        STR_CRACKHOUSE: 100
+    regionWeights:
+      0:
+        LANDSPAWNS: 100
+    varName: crackhousexxx	
+    executionOdds: 16
+    startDelay: 1000
+    randomDelay: 40000
+    facilityTriggers:
+      STR_PUBSANDBROTHEL: true  
