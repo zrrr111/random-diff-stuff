@@ -27,7 +27,7 @@ alienDeployments:
     length: 40
     height: 9
     script: GENERALSPAWN
-    customUfo: STR_CRACKHOUSE
+    customUfo: STR_CRACKHOUSE_UFO
     data:
       - alienRank: 3
         lowQty: 0
@@ -116,7 +116,7 @@ alienMissions:
         timer: 1000
         objective: true	
 ufos:
-  - type: STR_CRACKHOUSE
+  - type: STR_CRACKHOUSE_UFO
     size: STR_VERY_SMALL
     damageMax: 1
     speedMax: 500
